@@ -12,3 +12,15 @@ def get_all_albums() -> List[Album]:
         # TODO: implement error handling / logging
         pass
     return albums
+
+def create_album(name:str) -> Album:
+    """creates an album"""
+    album = None
+    try:
+        album = Album(name=name)
+        db.session.add(album)
+        db.session.commit()
+    except Exception as ex:
+        # TODO: implement error handling / logging
+        pass
+    return album
