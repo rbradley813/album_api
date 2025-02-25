@@ -12,7 +12,7 @@ $ pip3 install -r app/requirements.txt
 Once you have set up your virtual enviroment, run the api server on localhost by running the following command:
 
 ```console
-$ gunicorn -b localhost:8080 app:app
+$ gunicorn -b localhost:8080 entrypoint:app
 ```
 
 
