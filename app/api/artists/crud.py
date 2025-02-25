@@ -17,7 +17,7 @@ def create_artist(name:str) -> Artist:
     """creates an artist"""
     artist = None
     try:
-        artist = artist(name=name)
+        artist = Artist(name=name)
         db.session.add(artist)
         db.session.commit()
     except Exception as ex:
