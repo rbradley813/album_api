@@ -13,11 +13,11 @@ def get_all_albums() -> List[Album]:
         pass
     return albums
 
-def create_album(name:str) -> Album:
+def create_album(artist_id:int, name:str, release_date:str, price:float) -> Album:
     """creates an album"""
     album = None
     try:
-        album = Album(name=name)
+        album = Album(artist_id=artist_id, name=name, release_date=release_date, price=price)
         db.session.add(album)
         db.session.commit()
     except Exception as ex:
