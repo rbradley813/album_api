@@ -5,6 +5,7 @@ db = SQLAlchemy()
 
 def startup_app():
     from app.api.albums.models import Album
+    from app.api.artists.models import Artist
 
     app = Flask(__name__)
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///temp.db"
